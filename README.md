@@ -20,7 +20,7 @@ DevOps-Assignment/
 
 1. 🔹 Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/DevOps-Assignment.git
+   git clone https://github.com/TarakKatoch/DevOps-Assignment.git
    cd DevOps-Assignment
    ```
 
@@ -117,20 +117,15 @@ jobs:
 6. 🎯 Click **Generate Token**.
 7. 📋 Copy the token (it will not be shown again).
 
-### 🔹 Add the Token to GitHub Secrets
-1. 🔹 Navigate to your GitHub repository.
-2. 🔹 Go to **Settings > Secrets and variables > Actions**.
-3. 🔹 Click **New repository secret**.
-4. 🔹 Set the name as `DOCKERTOKEN`.
-5. 🔹 Paste the copied token in the value field.
-6. 🔹 Click **Add secret**.
+###🔹 Add Docker Credentials to GitHub Secrets
+1️. 🔹 Navigate to your GitHub repository.
+2️. 🔹 Go to Settings > Secrets and variables > Actions.
+3️. 🔹 Click New repository secret and add the following secrets:
+DOCKERTOKEN: Paste your Docker access token in the value field.
+DOCKER_USERNAME: Enter your Docker Hub username.
+4️. 🔹 Click Add secret for each.
 
-### 🔹 Set Up Docker Username Secret
-1. 🔹 Go to **Settings > Secrets and variables > Actions** in your GitHub repository.
-2. 🔹 Click **New repository secret**.
-3. 🔹 Set the name as `DOCKER_USERNAME`.
-4. 🔹 Enter your Docker Hub username.
-5. 🔹 Click **Add secret**.
+This ensures your GitHub Actions workflow can authenticate with Docker Hub. 🚀
 
 ## 🚀 Pushing the Project to GitHub
 ```bash
