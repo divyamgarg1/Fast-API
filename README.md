@@ -112,31 +112,31 @@ jobs:
 1. 🔐 Log in to Docker Hub.
 2. 🛠️ Go to **Account Settings > Security**.
 3. 🎟️ Under **Access Tokens**, click **Generate Token**.
-4. 📝 Provide a description (e.g., `GitHubActionsToken`).
-5. 🏗️ Select **Read & Write** permissions.
+4. ✍️ Provide a description (e.g., `GitHubActionsToken`).
+5. 📝 Select **Read & Write** permissions.
 6. 🎯 Click **Generate Token**.
 7. 📋 Copy the token (it will not be shown again).
 
 ### 🔹 Add Docker Credentials to GitHub Secrets  
 
-1️. 🔹**Navigate to your GitHub repository.**  
-2️. 🔹**Go to** **Settings > Secrets and variables > Actions**.  
-3️. 🔹**Click** **New repository secret** and add the following:  
+1️. 🧭**Navigate to your GitHub repository.**  
+2️. ⚙️**Go to** **Settings > Secrets and variables > Actions**.  
+3️. 👆**Click** **New repository secret** and add the following:  
 
-   -  **DOCKERTOKEN**: Paste your Docker access token.  
-   -  **DOCKER_USERNAME**: Enter your Docker Hub username.  
+   - 🔑 **DOCKERTOKEN**: Paste your Docker access token.  
+   - 👤 **DOCKER_USERNAME**: Enter your Docker Hub username.  
 
-4️. 🔹**Click** **Add secret** for each.  
+4️. ✅**Click** **Add secret** for each.  
 
-✅ This ensures your GitHub Actions workflow can authenticate with Docker Hub. 🚀
+This ensures your GitHub Actions workflow can authenticate with Docker Hub. 🚀
 
 ## 🚀 Pushing the Project to GitHub
 ```bash
 git init
+git remote add origin https://github.com/TarakKatoch/DevOps-Assignment.git
 git add .
 git commit -m "Initial commit"
 git branch -M main
-git remote add origin https://github.com/<your-username>/DevOps-Assignment.git
 git push -u origin main
 ```
 
@@ -148,7 +148,7 @@ git push -u origin main
 5. 🔹 Go to Docker Hub and check if the `fastapi-app:latest` image was pushed successfully.
 6. 🔹 Run the image locally using:
    ```bash
-   docker run -p 8000:8000 <your-dockerhub-username>/fastapi-app:latest
+   docker run -p 8000:8000 savage099/fastapi-app:latest
    ```
 7. 🔹 Open a browser and go to:
    ```
