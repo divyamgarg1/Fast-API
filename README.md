@@ -126,7 +126,7 @@ jobs:
    - 🔑 **DOCKERTOKEN**: Paste your Docker access token.  
    - 👤 **DOCKER_USERNAME**: Enter your Docker Hub username.  
 
-4️. ✅**Click** **Add secret** for each.  
+4️. ✅ **Click** **Add secret** for each.  
 
 This ensures your GitHub Actions workflow can authenticate with Docker Hub. 🚀
 
