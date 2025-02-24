@@ -119,9 +119,9 @@ jobs:
 
 ### 🔹 Add Docker Credentials to GitHub Secrets  
 
-1️. 🧭**Navigate to your GitHub repository.**  
-2️. ⚙️**Go to** **Settings > Secrets and variables > Actions**.  
-3️. 👆**Click** **New repository secret** and add the following:  
+1️. 🧭 **Navigate to your GitHub repository.**  
+2️. ⚙️ **Go to** **Settings > Secrets and variables > Actions**.  
+3️. 👆 **Click** **New repository secret** and add the following:  
 
    - 🔑 **DOCKERTOKEN**: Paste your Docker access token.  
    - 👤 **DOCKER_USERNAME**: Enter your Docker Hub username.  
