@@ -117,15 +117,18 @@ jobs:
 6. 🎯 Click **Generate Token**.
 7. 📋 Copy the token (it will not be shown again).
 
-###🔹 Add Docker Credentials to GitHub Secrets
-1️. 🔹 Navigate to your GitHub repository.
-2️. 🔹 Go to Settings > Secrets and variables > Actions.
-3️. 🔹 Click New repository secret and add the following secrets:
-DOCKERTOKEN: Paste your Docker access token in the value field.
-DOCKER_USERNAME: Enter your Docker Hub username.
-4️. 🔹 Click Add secret for each.
+## 🔹 Add Docker Credentials to GitHub Secrets  
 
-This ensures your GitHub Actions workflow can authenticate with Docker Hub. 🚀
+1️⃣ **Navigate to your GitHub repository.**  
+2️⃣ **Go to** **Settings > Secrets and variables > Actions**.  
+3️⃣ **Click** **New repository secret** and add the following:  
+
+   - 🔹 **DOCKERTOKEN**: Paste your Docker access token.  
+   - 🔹 **DOCKER_USERNAME**: Enter your Docker Hub username.  
+
+4️⃣ **Click** **Add secret** for each.  
+
+✅ This ensures your GitHub Actions workflow can authenticate with Docker Hub. 🚀
 
 ## 🚀 Pushing the Project to GitHub
 ```bash
