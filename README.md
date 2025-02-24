@@ -1,7 +1,12 @@
 # 🚀 Continuous Delivery of a Dockerized FastAPI Application using GitHub Actions
 
 ## 📌 Overview
-This project demonstrates Continuous Delivery (CD) by automating the creation and deployment of a Dockerized FastAPI application using GitHub Actions.
+This assignment demonstrates Continuous Delivery (CD) by automating the creation and deployment of a Dockerized FastAPI application using GitHub Actions.
+
+## Features
+- **FastAPI Server** responding with JSON data.
+- **Docker Containerization** using Ubuntu as the base image.
+- **GitHub Actions CI/CD** to build and push the image to Docker Hub.
 
 ## 📂 Project Directory Structure
 ```
