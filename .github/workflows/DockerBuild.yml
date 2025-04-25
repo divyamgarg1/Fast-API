@@ -1,29 +1,35 @@
-name: Docker Image Build and Push
+name: CI/CD for FastAPI
 
 on:
   push:
     branches:
-      - main  # Trigger on push to the main branch
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3  # Use the latest stable version
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: Log in to Docker Hub
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
         run: |
-          echo "${{ secrets.DOCKERTOKEN }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-      - name: Build Docker Image
+      - name: Run FastAPI app test (optional)
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/fastapi-app:latest .
+          uvicorn app.main:app --host 0.0.0.0 --port 8000 &
+          sleep 5
+          curl --fail http://localhost:8000/
 
-      - name: Push Docker Image to Docker Hub
-        run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/fastapi-app:latest
+      - name: Build Docker image
+        run: docker build -t fastapi-app .
 
-      - name: Logout from Docker Hub
-        run: docker logout  # Security best practice
+      # Add deployment steps if needed
